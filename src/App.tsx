@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Impact from "./components/Impact";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import MoreHighlights from "./components/MoreHighlights";
 import Timeline from "./components/Timeline";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
@@ -23,6 +24,7 @@ export default function App() {
       <About />
 
       <Projects />
+      <MoreHighlights />
 
       <Timeline />
 
