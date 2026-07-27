@@ -40,7 +40,7 @@ export default function Navbar() {
       >
         <a
           href="#home"
-          className="text-2xl font-black tracking-[0.2em] text-white"
+          className="text-3xl font-black tracking-[0.2em] text-white"
         >
           AYUBA BAZAM<span className="text-yellow-400">.</span>
         </a>

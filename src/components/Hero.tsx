@@ -24,7 +24,7 @@ export default function Hero() {
                 PROGRAMME MANAGEMENT • GOVERNANCE • PEACEBUILDING
               </span>
 
-              <h1 className="mt-8 text-6xl font-black leading-[1.05]">
+              <h1 className="mt-8 text-5xl font-black leading-[1.05]">
                 Leading programmes that advance peace,
                 <span className="text-yellow-400">
                   {" "}strengthen institutions
