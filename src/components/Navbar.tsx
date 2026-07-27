@@ -42,7 +42,7 @@ export default function Navbar() {
           href="#home"
           className="text-2xl font-black tracking-[0.2em] text-white"
         >
-          BAZAM<span className="text-yellow-400">.</span>
+          AYUBA BAZAM<span className="text-yellow-400">.</span>
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">
