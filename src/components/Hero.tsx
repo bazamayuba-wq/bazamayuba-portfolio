@@ -7,104 +7,146 @@ export default function Hero() {
       id="home"
       className="relative overflow-hidden bg-[#070707] text-white"
     >
-      {/* Animated Background */}
-      <motion.div
-        animate={{
-          scale: [1, 1.08, 1],
-          opacity: [0.08, 0.16, 0.08],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute right-[-300px] top-[-150px] h-[900px] w-[900px] rounded-full bg-yellow-400/10 blur-[180px]"
-      />
+      {/* Background Glow */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-yellow-400/10 blur-[140px] lg:left-[75%]" />
+      </div>
 
-      <motion.div
-        animate={{
-          scale: [1, 1.05, 1],
-          opacity: [0.05, 0.1, 0.05],
-        }}
-        transition={{
-          duration: 12,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute bottom-[-250px] left-[-250px] h-[700px] w-[700px] rounded-full bg-blue-600/10 blur-[180px]"
-      />
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-12">
 
-      <div className="relative mx-auto max-w-[1700px] px-8 pt-20 pb-24 lg:px-20">
-        <div className="grid min-h-screen items-center gap-10 lg:grid-cols-[48%_52%]">
-
-          {/* LEFT */}
+        {/* Desktop */}
+        <div className="hidden min-h-screen items-center gap-12 lg:grid lg:grid-cols-2">
 
           <MotionReveal>
+            <div className="max-w-xl">
 
-            <span className="inline-block rounded-full border border-yellow-400/40 bg-yellow-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-yellow-400">
-              Programme Management • Governance • Peacebuilding
-            </span>
+              <span className="inline-block rounded-full border border-yellow-400/30 px-4 py-2 text-[11px] font-semibold tracking-[0.25em] text-yellow-400">
+                PROGRAMME MANAGEMENT • GOVERNANCE • PEACEBUILDING
+              </span>
 
-            <h1 className="mt-8 text-6xl font-black leading-[1.02] tracking-[-0.03em] lg:text-7xl xl:text-[5.8rem]">
-              Leading programmes that advance peace,
-              <span className="text-yellow-400"> strengthen institutions</span>,
-              and empower the next generation of leaders.
-            </h1>
+              <h1 className="mt-8 text-6xl font-black leading-[1.05]">
+                Leading programmes that advance peace,
+                <span className="text-yellow-400">
+                  {" "}strengthen institutions
+                </span>,
+                and empower the next generation of leaders.
+              </h1>
 
-            <p className="mt-8 max-w-3xl text-xl leading-9 text-zinc-400">
-              I design and deliver high-impact programmes across
-              peacebuilding, democracy, governance and youth leadership,
-              partnering with governments, international organisations,
-              and civil society to create measurable social change.
-            </p>
+              <p className="mt-8 text-lg leading-8 text-zinc-400">
+                I design and deliver high-impact programmes across
+                peacebuilding, democracy, governance and youth leadership,
+                partnering with governments, international organisations and
+                civil society to create measurable social change.
+              </p>
 
-            <div className="mt-12 flex flex-wrap gap-5">
+              <div className="mt-10 flex gap-4">
 
-              <motion.a
-                whileHover={{ scale: 1.05, y: -3 }}
-                whileTap={{ scale: 0.98 }}
-                href="#projects"
-                className="rounded-full bg-yellow-400 px-8 py-4 font-semibold text-black shadow-lg shadow-yellow-400/20"
-              >
-                Explore My Work
-              </motion.a>
+                <a
+                  href="#projects"
+                  className="rounded-full bg-yellow-400 px-8 py-4 font-semibold text-black transition hover:scale-105"
+                >
+                  Explore My Work
+                </a>
 
-              <motion.a
-                whileHover={{ scale: 1.05, y: -3 }}
-                whileTap={{ scale: 0.98 }}
-                href="#contact"
-                className="rounded-full border border-white/20 px-8 py-4 transition duration-300 hover:border-yellow-400 hover:text-yellow-400"
-              >
-                Contact Me
-              </motion.a>
+                <a
+                  href="#contact"
+                  className="rounded-full border border-white/20 px-8 py-4 font-semibold transition hover:border-yellow-400"
+                >
+                  Contact Me
+                </a>
+
+              </div>
 
             </div>
-
-            <div className="mt-16 h-px w-full max-w-2xl bg-gradient-to-r from-yellow-400/40 via-white/10 to-transparent" />
-
           </MotionReveal>
 
-          {/* RIGHT */}
-
           <MotionReveal delay={0.2}>
-
-            <div className="relative flex h-[820px] items-end justify-end overflow-hidden">
+            <div className="flex justify-center lg:justify-end">
 
               <motion.img
-                src="/images/hero.jpg"
+                src="/hero.png"
                 alt="Ayuba Bazam"
-                animate={{
-                  y: [0, -8, 0],
-                }}
+                animate={{ y: [0, -12, 0] }}
                 transition={{
                   duration: 6,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                whileHover={{
-                  scale: 1.02,
+                className="
+                  w-[260px]
+                  sm:w-[340px]
+                  md:w-[400px]
+                  lg:w-[460px]
+                  xl:w-[500px]
+                  h-auto
+                  object-contain
+                  drop-shadow-[0_25px_60px_rgba(0,0,0,.55)]
+                "
+              />
+
+            </div>
+          </MotionReveal>
+
+        </div>
+
+        {/* Mobile */}
+        <div className="lg:hidden min-h-screen flex flex-col justify-center pt-28 pb-10">
+
+          <MotionReveal>
+
+            <span className="inline-block rounded-full border border-yellow-400/30 px-4 py-2 text-[10px] tracking-[0.2em] text-yellow-400">
+              PROGRAMME MANAGEMENT • GOVERNANCE • PEACEBUILDING
+            </span>
+
+            <h1 className="mt-6 text-[2.35rem] font-black leading-tight">
+              Leading programmes that advance peace,
+              <span className="text-yellow-400">
+                {" "}strengthen institutions
+              </span>,
+              and empower the next generation of leaders.
+            </h1>
+
+            <p className="mt-6 text-base leading-7 text-zinc-400">
+              I design and deliver high-impact programmes across
+              peacebuilding, democracy, governance and youth leadership,
+              partnering with governments, international organisations and
+              civil society.
+            </p>
+
+            <div className="mt-8 flex flex-col gap-4">
+
+              <a
+                href="#projects"
+                className="rounded-full bg-yellow-400 px-7 py-4 text-center font-semibold text-black"
+              >
+                Explore My Work
+              </a>
+
+              <a
+                href="#contact"
+                className="rounded-full border border-white/20 px-7 py-4 text-center font-semibold"
+              >
+                Contact Me
+              </a>
+
+            </div>
+
+          </MotionReveal>
+
+          <MotionReveal delay={0.2}>
+
+            <div className="mt-12 flex justify-center">
+
+              <motion.img
+                src="/hero.png"
+                alt="Ayuba Bazam"
+                animate={{ y: [0, -6, 0] }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
                 }}
-                className="relative h-[820px] w-auto max-w-none object-contain lg:translate-x-6"
+                className="w-[260px] h-auto object-contain"
               />
 
             </div>
@@ -112,26 +154,6 @@ export default function Hero() {
           </MotionReveal>
 
         </div>
-
-        {/* Scroll Indicator */}
-
-        <motion.div
-          animate={{
-            y: [0, 8, 0],
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-          }}
-          className="mt-10 flex justify-center"
-        >
-          <a
-            href="#about"
-            className="text-xs uppercase tracking-[0.35em] text-zinc-500 transition hover:text-yellow-400"
-          >
-            Scroll ↓
-          </a>
-        </motion.div>
 
       </div>
     </section>
