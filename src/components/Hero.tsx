@@ -20,11 +20,11 @@ export default function Hero() {
           <MotionReveal>
             <div className="max-w-xl">
 
-              <span className="inline-block rounded-full border border-yellow-400/30 px-3 py-1.5 text-[11px] font-semibold tracking-[0.25em] text-yellow-400">
+              <span className="inline-block rounded-full border border-yellow-400/30 px-6 py-3 text-[11px] font-semibold tracking-[0.25em] text-yellow-400">
                 PROGRAMME MANAGEMENT • GOVERNANCE • PEACEBUILDING
               </span>
 
-              <h1 className="mt-8 text-5xl font-black leading-[1.05]">
+              <h1 className="mt-8 text-6xl font-black leading-[1.05]">
                 Leading programmes that advance peace,
                 <span className="text-yellow-400">
                   {" "}strengthen institutions
